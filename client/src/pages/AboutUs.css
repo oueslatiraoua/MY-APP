@@ -1,0 +1,509 @@
+.w apper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background-containerAboutUS {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background: linear-gradient(
+    #26291b,
+    #26291b,
+    40%,
+    BurlyWood 50%,
+    BurlyWood 100%
+  );
+}
+
+.about-container {
+  width: 85%;
+  min-height: 80vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 24px 24px 30px #26291b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  font-family: "Arial";
+  font-size: 22px;
+  line-height: 1.5;
+}
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-container img {
+  width: 500px;
+  height: 500px;
+  margin: 20px;
+  border-radius: 40px;
+}
+.text-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 22px;
+}
+.text-container h1 {
+  font-size: 70px;
+  padding: 20px 0px;
+}
+.text-container a {
+  text-decoration: none;
+  padding: 12px;
+  margin: 50px 0px;
+  background-color: rebeccapurple;
+  border: 2px solid transparent;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s all ease;
+}
+.text-container a:hover {
+  background-color: transparent;
+  color: black;
+  border: 2px solid rebeccapurple;
+}
+@media screen and (max-width: 1600px) {
+  .about-container {
+    width: 90%;
+  }
+  .image-container img {
+    width: 200px;
+    height: 200px;
+  }
+  .text-container h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .about-container {
+    flex-direction: column;
+    font-family: Arial;
+  }
+  .image-container img {
+    width: 300px;
+    height: 300px;
+  }
+  .text-container {
+    align-items: center;
+  }
+}
+/* =================================================================
+
+
+.bodyService1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: BurlyWood;
+}
+.container1 {
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+}
+.container1 .box1 {
+  position: relative;
+  width: 320px;
+  background: #fff;
+  padding: 100px 40px 60px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+.container1 .box1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: IndianRed;
+  transform: scaleY(0);
+  transition: transform 0.5s;
+}
+.container1 .box1:hover:before {
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+.container1 .box1 h2 {
+  position: absolute;
+  left: 40px;
+  top: 60px;
+  font-size: 4em;
+  font-weight: 800;
+  z-index: 1;
+  opacity: 0.1;
+  transition: 0.5s;
+}
+.container1 .box1:hover h2 {
+  opacity: 1;
+  color: #fff;
+  transform: translateY(-40px);
+}
+.container1 .box1 h3 {
+  position: relative;
+  font-size: 1.5em;
+  z-index: 2;
+  color: #333;
+  transition: 0.5s;
+}
+.container1 .box1 p {
+  position: relative;
+  z-index: 2;
+  color: #555;
+  transition: 0.5s;
+}
+.container1 .box1:hover h2,
+.container1 .box1:hover p {
+  color: #fff;
+}
+
+/* ================================================================= */
+.navbarAboutUs {
+  background-color: Lavender;
+  width: 100%;
+  position: fixed;
+  height: 70px;
+}
+.navbarAboutUs .logo a {
+  display: block;
+  text-decoration: none;
+  color: #0e2431;
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: capitalize;
+  margin-left: 225px;
+  letter-spacing: 3px;
+  margin-top: 18px;
+  position: fixed;
+  z-index: 1;
+}
+
+/* ================================================================= */
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #6e93f7;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4070f4;
+}
+
+/* Side Navigation Menu Button CSS */
+nav .menu-btn,
+.navbar .menu .cancel-btn {
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+nav .menu-btn {
+  color: #4070f4;
+}
+nav.sticky .menu-btn {
+  color: #fff;
+}
+.navbar .menu .menu-btn {
+  color: #fff;
+}
+
+/* home section styling */
+.home {
+  height: 100vh;
+  width: 100%;
+  background: url("./backg.jfif") no-repeat;
+  background-size: cover;
+
+  background-attachment: fixed;
+  font-family: "Ubuntu", sans-serif;
+}
+.home .home-content {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home .button {
+  margin: 14px 0;
+}
+.home .button button {
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #4070f4;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+}
+.home .button button:hover {
+  border-color: #4070f4;
+  background-color: #fff;
+  color: #4070f4;
+}
+
+/* About Section Styling */
+/* Those Elements Where We Have Apply Same CSS,
+ I'm Selecting Directly 'Section Tag' and 'Class'  */
+
+section {
+  padding-top: 40px;
+}
+section .content {
+  width: 80%;
+  margin: 40px auto;
+  font-family: "Poppins", sans-serif;
+}
+.about .about-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+section .title span {
+  color: #0e2431;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+section .title span::before,
+section .title span::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: gray;
+  left: 0;
+  bottom: 0;
+}
+section .title span::after {
+  bottom: -7px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about .about-details .left {
+  width: 45%;
+}
+.about .left img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.about-details .right {
+  width: 55%;
+}
+section .topic {
+  color: #0e2431;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.about-details .right p {
+  text-align: justify;
+  color: #0e2431;
+}
+section .button {
+  margin: 16px 0;
+}
+section .button button {
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 400;
+  background: gray;
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+section .button button:hover {
+  border-color: #4070f4;
+  background-color: #fff;
+  color: #4070f4;
+}
+
+/* My Services CSS */
+.services .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services .boxes .box {
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover {
+  background: gray;
+  color: #fff;
+}
+
+.services .boxes .box .icon {
+  height: 50px;
+  width: 50px;
+
+  border-radius: 50%;
+  text-align: center;
+
+  line-height: 50px;
+  font-size: 30px;
+
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+.boxes .box:hover .icon {
+  background-color: #fff;
+  color: #4070f4;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p {
+  color: #0e2431;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p {
+  color: #fff;
+}
+/* Contact Me CSS */
+.contact {
+  background: #f0f8ff;
+}
+.contact .content {
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.contact .text {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+/* Scroll TO Top Button CSS */
+.scroll-button a {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #4070f4;
+  padding: 7px 12px;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+/* Responsive Media Query */
+@media (max-width: 1190px) {
+  section .content {
+    width: 85%;
+  }
+}
+@media (max-width: 1000px) {
+  .about .about-details {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .about .about-details .left {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .about-details .right {
+    width: 90%;
+    margin: 40px 0;
+  }
+  .services .boxes .box {
+    margin: 20px 0;
+    width: calc(100% / 2 - 20px);
+  }
+}
+@media (max-width: 900px) {
+  .about .left img {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 750px) {
+  .home .text-two {
+    font-size: 65px;
+  }
+  .home .text-three {
+    font-size: 35px;
+  }
+  .skills .skills-details {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .skills-details .text {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .skills-details .boxes {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .services .boxes .box {
+    margin: 20px 0;
+    width: 100%;
+  }
+  .contact .text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .home .text-two {
+    font-size: 55px;
+  }
+  .home .text-three {
+    font-size: 33px;
+  }
+  .skills-details .boxes .per {
+    font-size: 50px;
+    color: #4070f4;
+  }
+}
